@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  background-color: #ccc;
+  height: 100vh;
+}
+
+#sidenavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(
+    circle 325px at 19.2% 64.8%,
+    rgba(254, 62, 101, 1) 9.7%,
+    rgba(166, 24, 146, 1) 91.3%
+  );
+  height: 100%;
+  width: 250px;
+}
+#section {
+  background-color: white;
+  width: calc(100% - 250px);
+  height: 100vh;
+  margin-left: 250px;
+}
+#section #topnav {
+  position: fixed;
+  background-image: radial-gradient(
+    circle 897px at 9% 80.3%,
+    rgba(55, 60, 245, 1) 0%,
+    rgba(234, 161, 15, 0.9) 100.2%
+  );
+  top: 0;
+  left: 250px;
+  width: 100%;
+  padding: 12px 15px;
+
+  width: calc(100% - 250px);
+}
+
+#toggler {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  font-size: 25px;
+  border-radius: 50%;
+  display: none;
+}
+.group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#toggler:hover {
+  background-color: orange;
+  transition: 0.3s;
+}
+
+#content {
+  padding: 100px 50px;
+}
+
+#sidenav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+#sidenav-menu button {
+  border: none;
+  padding: 8px 0px;
+}
+
+#sidenav-menu button:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+#register-btn {
+  background-color: darkorange;
+  color: white;
+}
+
+#sign {
+  display: none;
+}
+
+#card {
+  width: 300px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 24px;
+}
+#card form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+#card form button {
+  border: none;
+  padding: 10px;
+  background-color: aqua;
+}
+input {
+  border: 1px solid #ccc;
+  padding: 14px;
+}
+
+.label {
+  color: blue;
+}
+@media (max-width: 768px) {
+  #sidenavbar {
+    width: 0;
+  }
+
+  #section {
+    width: 100%;
+  }
+  #section {
+    margin-left: 0px;
+  }
+
+  #section #topnav {
+    left: 0;
+    width: 100%;
+  }
+  #toggler {
+    display: block;
+  }
+}
